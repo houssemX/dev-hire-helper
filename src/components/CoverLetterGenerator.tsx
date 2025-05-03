@@ -29,7 +29,8 @@ Dear Hiring Manager,
 
 I am writing to express my interest in the ${jobData.title} position at ${jobData.company}. With ${userCV.yearsOfExperience} years of experience as a ${userCV.title}, I believe I am an excellent fit for this role.
 
-${jobData.isDotNetJob ? 
+${jobData.technologies?.includes(".NET") || jobData.technologies?.includes("C#") || 
+  jobData.technologies?.includes("ASP.NET") || jobData.technologies?.includes("Entity Framework") ? 
   `I was particularly excited to see that you are looking for someone with .NET and C# skills. These are technologies I have extensive experience with, having worked on numerous projects involving ${userCV.skills.filter(skill => ['.NET', 'C#', 'ASP.NET', 'Entity Framework'].some(s => skill.includes(s))).join(', ')}.` 
   : 
   `I have a strong background in ${userCV.skills.slice(0, 3).join(', ')}, which align well with your requirements.`
