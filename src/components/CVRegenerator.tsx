@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { JobData } from "@/types/jobTypes";
 import { useToast } from "@/components/ui/use-toast";
-import { save } from "lucide-react";
+import { Save } from "lucide-react";
 
 interface CVRegeneratorProps {
   jobData: JobData | null;
@@ -113,7 +113,7 @@ const CVRegenerator = ({ jobData }: CVRegeneratorProps) => {
         </CardContent>
         <CardFooter className="flex justify-end">
           <Button onClick={handleDownload}>
-            <save className="h-4 w-4 mr-2" />
+            <Save className="h-4 w-4 mr-2" />
             Download Tailored CV
           </Button>
         </CardFooter>
