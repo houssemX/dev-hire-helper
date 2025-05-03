@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { upload } from "lucide-react";
+import { Upload } from "lucide-react";
 
 interface CVUploaderProps {
   onUpload: (file: File) => void;
@@ -81,7 +81,7 @@ const CVUploader = ({ onUpload }: CVUploaderProps) => {
             accept=".pdf,.docx"
             className="hidden"
           />
-          <upload className="mx-auto h-12 w-12 text-gray-400 mb-4" />
+          <Upload className="mx-auto h-12 w-12 text-gray-400 mb-4" />
           <p className="text-sm text-gray-500 mb-2">
             Drag and drop your CV here, or{" "}
             <button

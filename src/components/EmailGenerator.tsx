@@ -4,7 +4,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
-import { copy, mail, save } from "lucide-react";
+import { Copy, Mail, Save } from "lucide-react";
 import { JobData } from "@/types/jobTypes";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -65,21 +65,21 @@ const EmailGenerator = ({ jobData }: EmailGeneratorProps) => {
         <CardFooter className="flex flex-wrap gap-2 justify-between">
           <div className="flex flex-wrap gap-2">
             <Button variant="outline" size="sm" onClick={() => copyToClipboard(emailBody)}>
-              <copy className="h-4 w-4 mr-2" />
+              <Copy className="h-4 w-4 mr-2" />
               Copy Body
             </Button>
             <Button variant="outline" size="sm" onClick={() => copyToClipboard(`Subject: ${subject}\n\n${emailBody}`)}>
-              <copy className="h-4 w-4 mr-2" />
+              <Copy className="h-4 w-4 mr-2" />
               Copy All
             </Button>
           </div>
           <div className="flex flex-wrap gap-2">
             <Button size="sm" variant="outline" onClick={openInGmail}>
-              <mail className="h-4 w-4 mr-2" />
+              <Mail className="h-4 w-4 mr-2" />
               Open in Gmail
             </Button>
             <Button size="sm" variant="outline" onClick={openInOutlook}>
-              <mail className="h-4 w-4 mr-2" />
+              <Mail className="h-4 w-4 mr-2" />
               Open in Outlook
             </Button>
           </div>

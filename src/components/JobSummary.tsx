@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { copy } from "lucide-react";
+import { Copy } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { JobData } from "@/types/jobTypes";
 
@@ -39,7 +39,7 @@ const JobSummary = ({ jobData }: JobSummaryProps) => {
               onClick={() => copyToClipboard(jobData.summary)}
               className="flex items-center gap-1 text-xs"
             >
-              <copy className="h-3 w-3" />
+              <Copy className="h-3 w-3" />
               Copy
             </Button>
           </div>
